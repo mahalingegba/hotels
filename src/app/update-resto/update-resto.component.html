@@ -1,0 +1,24 @@
+<p>Edit-restaurant Details!</p>
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success !</strong>Data has been Updated Successfully.
+    <button (click)="close()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+<form [formGroup]="editResto" (ngSubmit)="collectUpdatedRestoDetails()">
+    <div class="form-group">
+      <label >Name</label>
+      <input type="text" class="form-control"  placeholder="Enter Name" formControlName="name">
+</div>
+<div class="form-group">
+    <label >email</label>
+    <input type="email" class="form-control"  placeholder="Enter email" formControlName="email">
+</div>
+<div class="form-group">
+    <label >Adress</label>
+    <input type="text" class="form-control"  placeholder="Enter Adress" formControlName="Adress">
+</div>
+
+    <br>
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
